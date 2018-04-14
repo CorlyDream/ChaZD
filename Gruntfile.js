@@ -33,7 +33,8 @@ module.exports = function(grunt) {
                 src: ["src/**/*.js", "Gruntfile.js"],
 
                 options: {
-                    jshintrc: true
+                    jshintrc: true,
+                    reporterOutput: ""
                 }
             }
         },
@@ -46,7 +47,7 @@ module.exports = function(grunt) {
             all: {
                 files: [{
                     expand: true,
-                    cwd: "src/javascript",
+                    cwd: "src/js",
                     src: ["*.js", "!*.min.js"],
                     dest: "public/js",
                     ext: ".min.js"

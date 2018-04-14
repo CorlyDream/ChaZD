@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "ChaZD",
-  "version": "0.8.19",
+  "version": "1.0.0",
   "description": "ChaZD 查字典，简洁易用的英汉字典扩展程序，支持划词哦:)",
 
   "permissions": [
@@ -10,6 +10,7 @@
     "https://fanyi.youdao.com/*",
     "http://dict.youdao.com/*",
     "http://fanyi.youdao.com/*",
+    "http://openapi.youdao.com/*",
     "contextMenus",
     "tabs",
     "storage",
@@ -20,13 +21,13 @@
 
   "background": {
       "persistent": true,
-      "scripts": [ "public/js/utility.min.js", "public/js/background.min.js" ]
+      "scripts": [ "public/js/md5.min.js","public/js/utility.min.js", "public/js/background.min.js" ]
    },
 
   "content_scripts": [ {
     "all_frames": true,
     "css": ["public/css/inPage.min.css"],
-    "js": ["public/js/utility.min.js", "public/js/selection.min.js"],
+    "js": ["public/js/md5.min.js", "public/js/utility.min.js", "public/js/selection.min.js"],
     "matches": ["<all_urls>"]
       
   } ],
