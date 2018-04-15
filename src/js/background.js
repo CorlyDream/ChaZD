@@ -1,4 +1,5 @@
 function ChaZD(queryWord, useHttps, wordSource, sendResponse) {
+    queryWord = trim(queryWord);
     this.wordSource = wordSource;
     this.useHttps = useHttps;
     var sign = md5(api.appId+queryWord+api.salt+api.appKey);
